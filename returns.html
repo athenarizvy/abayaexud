@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.form-container {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #050505;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #070707;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Return & Exchanges</h1>
+        <p>Return/Exchange your product in just a few clicks. Please enter your order number and email/mobile number to continue.</p>
+        <p><strong>Rs 150 will be charged as reverse pick-up fees.</strong></p>
+
+        <p>If you have received a defective or incorrect product, please feel free to contact us. 
+        <p>Please read our return and exchange policies before proceeding.</p>
+
+        <div class="form-container">
+            <h3>Get Started</h3>
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" placeholder="Enter your order number" required>
+
+            <label for="emailMobile">Email / Mobile Number:</label>
+            <input type="text" id="emailMobile" placeholder="Enter your email or mobile number" required>
+
+            <button id="continueBtn">CONTINUE</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", function() {
+    const orderNumber = document.getElementById("orderNumber").value;
+    const emailMobile = document.getElementById("emailMobile").value;
+
+    if (orderNumber && emailMobile) {
+        alert("Proceeding with Order Number: " + orderNumber + " and Email/Mobile: " + emailMobile);
+    } else {
+        alert("Please fill in both fields.");
+    }
+});
+    </script>
+</body>
+</html>
+</body>

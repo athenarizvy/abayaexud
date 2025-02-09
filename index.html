@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abaya Exude Header</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+     <div class="nav-bar">
+      <div class="logo">
+        <h1>Abaya Exude</h1>
+     </div>
+      <nav>
+        <ul>
+           <li><a href="http://127.0.0.1:5500/abayanav.html">Abayas</a></li>
+          <li><a href="http://127.0.0.1:5500/Hijabs.html">Hijabs</a></li>
+          <li><a href="http://127.0.0.1:5500/Cordset.html">Co Ord Set</a></li>
+        
+        </ul>
+      </nav>
+      <div class="extras">
+        <a href="http://127.0.0.1:5500/cart.html">🛒
+        </a> 
+        </div>
+    </div>
+    <div class="info-bar">
+      <p>COD Available</p>
+      <p>Free prepaid shipping on orders above Rs. 2000</p>
+      <p>Easy 7-day returns</p>
+    </div>
+  </header>
+</body>
+<style>
+ /* General reset */
+ body ,ul, li {
+    margin: 1em;
+    padding: 0;
+    list-style: none;
+     font-family: serif;
+}
+/* Top bar */
+.top-bar {
+  background-color:rgba(27, 188, 113, 0.868) ;
+  text-align: center;
+  padding: 1;
+  font-size: large;
+  color: #e11e1e;
+}
+/* Navigation bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f7f4f4;
+  background-color: hsla(309, 28%, 24%, 0.772);
+
+}
+.logo h1 {
+  font-size: 70px;
+  margin: 0;
+}
+.logo span {
+  font-weight: bold;
+  color:#1db954;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  text-decoration: underline;
+  color: #f9f6f6;
+  font-size: 19px;
+}
+nav ul li a:hover {
+  color: #fef9f9;
+}
+/* Extras section */
+.extras {
+  display: flex;
+}
+.extras a {
+  text-decoration: none;
+  color: #e40f0f;
+  font-size: 35px;
+}
+.extras a:hover {
+  color: #de4949;
+}
+/* Info bar */
+.info-bar {
+  background-color: #f6f2f2;
+  text-align: center;
+  font-size: 12px;
+  color: #927171;
+  padding: 1;
+  border-top: 1px solid #f9f8f8;
+  display: flex;
+  justify-content: space-around;
+}
+</style>
+<body>
+  <div class="container">
+    <img src="abyya.jpg" alt="Popular Designs Restocked" class="background-image">
+    <div class="overlay">
+      <h1>Popular Designs Restocked</h1>
+      <p>AND MADE BETTER</p>
+      <a href="http://127.0.0.1:5500/shop%20now.html" class="shop-now-link">
+      <button class="shop-now">SHOP NOW</button> 
+    </div>
+    </div>
+  </div>
+  <style>
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+ {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .shop-now {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .shop-now:hover {
+    background-color: #444;
+  </style>
+   <main>
+    <h1>Shop The Abaya Collection</h1>
+ <div class="grid">
+      <!-- Product Card 1 -->
+      <div class="card">
+        <img src="abbbb.jpg" alt="Product 1">
+        <h1>Grey Melody</h1>
+        <p>Rs. 1999</p>
+        <div class="container">
+        <button class="quick-buy">QUICK BUY</button>
+    </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="card">
+        <img src="abb.jpg" alt="Product 2">
+        <h1>Greyish</h1>
+        <p>Rs. 2200</p>
+        <div class="container">
+        <button class="quick-buy">QUICK BUY</button>
+    </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="card">
+        <img src="abbb.jpg" alt="Product 3">
+        <h1>Olivian</h1>
+        <p>Rs. 2500</p>
+        <div class="container">
+        <button class="quick-buy">QUICK BUY</button>
+    </div>
+      </div>
+    </div>
+  </main>
+  <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Create modal dynamically
+            const modal = document.createElement("div");
+            modal.classList.add("modal");
+            modal.innerHTML = `
+                <span class="close">&times;</span>
+                <img class="modal-content">
+            `;
+            document.body.appendChild(modal);
+
+            const modalImg = modal.querySelector(".modal-content");
+            const closeBtn = modal.querySelector(".close");
+
+            // Select all images
+            const images = document.querySelectorAll("img");
+
+            images.forEach(img => {
+                img.addEventListener("click", function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                });
+            });
+
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            window.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Add event listener for buttons
+            const buttons = document.querySelectorAll(".quick-buy");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    alert("Product added to cart!");
+                });
+            });
+        });
+    </script>
+  <style>
+    /* General Styles */
+body {
+  font-family:serif;
+  margin: 0;
+  padding: 0;
+  background-color: #060606;
+  color: #101010;
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(5, 5, 5, 0.906);
+}
+.navbar a {
+  text-decoration: none;
+  color: #f9f6f6;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #090909;
+}
+/* Main Content */
+main {
+  text-align: center;
+  margin: 20px;
+}
+main h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #0a0a0a;
+  box-shadow: 0 4px 6px rgba(128, 98, 98, 0.916);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.quick-buy {
+    background-color: white;
+    color: black;
+    border: 2px solid #ccc;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.quick-buy:hover {
+    background-color: #e0e0e0;
+}
+    </style>
+<main>
+    <h1>Shop The Hijab Collection</h1>
+    <div class="grid">
+      <!-- Product Card 1 -->
+      <div class="card">
+        <img src="hiiii.jpg" alt="Product 1">
+        <h1>Peach Plum</h1>
+        <p>Rs.350</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button>
+      </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="card">
+        <img src="hii.jpg" alt="Product 2">
+        <h1>  Charcoal Ember</h1>
+        <p>Rs 350</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button> 
+        
+      </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="card">
+        <img src="hiii.jpg" alt="Product 3">
+        <h1>Navy Royale</h1>
+        <p>Rs 350</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button>
+      </div>
+      </div>
+  
+    </div>
+  </main>
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #1db954;
+}
+/* Main Content */
+main {
+  text-align: center;
+  margin: 20px;
+}
+main h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #cb1919;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.quick-buy {
+    background-color: rgb(10, 10, 10);
+    color: rgb(2, 2, 2);
+    border: 2px solid #050505;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.quick-buy:hover {
+    background-color: #e0e0e0;
+}
+  </style>
+<main>
+    <h1>Shop The Co Ord Collection</h1>
+    <div class="grid">
+      <!-- Product Card 1 -->
+      <div class="card">
+        <img src="cd.jpg" alt="Product 1">
+        <h1>Cocoa Luxe</h1>
+        <p>Rs. 1700</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button>
+      </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="card">
+        <img src="cdd.jpg" alt="Product 2">
+        <h1>Royal Plum</h1>
+        <p>Rs. 1800</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button>
+      </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="card">
+        <img src="cddd.jpg" alt="Product 3">
+        <h1>Sandy Beige</h1>
+        <p>Rs. 1800</p>
+        <div class="container">
+          <button class="quick-buy">QUICK BUY</button>
+      </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </main>
+  <style>
+    /* General Styles */
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #1db954;
+}
+
+/* Main Content */
+main {
+  text-align: center;
+  margin: 20px;
+}
+
+main h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.quick-buy {
+    background-color: white;
+    color: black;
+    border: 2px solid #ccc;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.quick-buy:hover {
+    background-color: #e0e0e0;
+}
+  </style>
+<body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Abaya Exude</h3>
+        <p>
+          Abaya Exude is a homegrown brand started in January 2025. Started with just selling Hijabs Online, we are proud to say that Abaya Exude is the most loved Modest Clothing Brand in India. ❤
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="http://127.0.0.1:5500/returns.html">Returns</a></li>
+          
+          <li><a href="http://127.0.0.1:5500/terms%20and%20coonditions.html">Terms & Conditions</a></li>
+          <li><a href="http://127.0.0.1:5500/about%20us.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Sign up for exclusive offers, original stories, events, and more.</p>
+        <form>
+          <input type="email" placeholder="Your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #0a0a0af3;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f8f3f3;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #f8fbff;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #f1eded;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #5195df;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #6fa5e3;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Clothing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Clothing</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="filter-section">
+      <div class="filter-options">
+        <div class="price-filter">
+          <label for="min-price">Price Range:</label>
+          <input type="number" id="min-price" placeholder="₹0">
+          <input type="number" id="max-price" placeholder="₹4500">
+        </div>
+
+    </section>
+
+    <section class="product-section">
+      <div class="product-card">
+        <img src="aaaa.jpg" alt="Moonlit Pearl">
+        <h3>Moonlite Pearl</h3>
+        <p>₹2,500.00</p>
+        <p>Delivery in 6-8 days</p>
+        <div class="product-container">
+            <h1>Moonlit Pearl</h1>
+            <p class="delivery"> (Delivery in 6-8 days)</p>
+            <p class="price">₹ 2,500.00 INR</p>
+            <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+    
+            <p class="size-title">Size</p>
+            <div class="size-options">
+                <button class="size-button disabled">Small</button>
+                <button class="size-button disabled">Medium</button>
+                <button class="size-button">Large</button>
+                <button class="size-button disabled">X-Large</button>
+                <button class="size-button disabled">XX-Large</button>
+            </div>
+        </div>
+    
+      </div>
+
+      <div class="product-card">
+        <img src="a.jpg" alt="Silken Dune">
+        <h3>Silken Dune</h3>
+        <p>Delivery in 6-8 days</p>
+        <p>₹3,900.00</p>
+        <div class="product-container">
+            <h1>Silken Dune</h1>
+            <p class="delivery"> (Delivery in 6-8 days)</p>
+            <p class="price">₹ 3,900.00 INR</p>
+            <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+    
+            <p class="size-title">Size</p>
+            <div class="size-options">
+                <button class="size-button disabled">Small</button>
+                <button class="size-button disabled">Medium</button>
+                <button class="size-button">Large</button>
+                <button class="size-button disabled">X-Large</button>
+                <button class="size-button disabled">XX-Large</button>
+            </div>
+    
+        </div>
+    
+      </div>
+
+      <div class="product-card">
+        <img src="aa.jpg" alt="Creme Veil">
+        <h3>Creme Veil</h3>
+        <p>₹3,100.00</p>
+        <div class="product-container">
+            <h1>Creme Veil</h1>
+            <p class="delivery"> (Delivery in 6-8 days)</p>
+            <p class="price">₹ 3,100.00 INR</p>
+            <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+    
+            <p class="size-title">Size</p>
+            <div class="size-options">
+                <button class="size-button disabled">Small</button>
+                <button class="size-button disabled">Medium</button>
+                <button class="size-button">Large</button>
+                <button class="size-button disabled">X-Large</button>
+                <button class="size-button disabled">XX-Large</button>
+            </div>
+        </div>
+    
+      </div>
+
+      <div class="product-card">
+        <img src="aaa.jpg" alt="Dusky Elegence">
+        <h3>Dusky Elegence</h3>
+        <p>₹4,100.00</p>
+        <div class="product-container">
+            <h1>Dusky Elegance</h1>
+            <p class="delivery"> (Delivery in 6-8 days)</p>
+            <p class="price">₹ 2,499.00 INR</p>
+            <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+    
+            <p class="size-title">Size</p>
+            <div class="size-options">
+                <button class="size-button disabled">Small</button>
+                <button class="size-button disabled">Medium</button>
+                <button class="size-button">Large</button>
+                <button class="size-button disabled">X-Large</button>
+                <button class="size-button disabled">XX-Large</button>
+            </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <style>/* General Styles */
+    body {
+        font-family: serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #060606;
+    }
+    
+    header.header {
+      background-color: #060606;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    /* Filter Section */
+    .filter-section {
+      background-color: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .filter-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .price-filter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .price-filter input {
+      width: 100px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .me-bucks {
+      background-color: #c5a880;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .me-bucks:hover {
+      background-color: #b08b72;
+    }
+    
+    /* Product Section */
+    .product-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    
+    .product-card p {
+      color: #555;
+      margin: 0 0 10px 0;
+   }
+ {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.product-container {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.delivery {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.brand-name {
+    color: #b07d62;
+    font-weight: bold;
+}
+
+.size-title {
+    font-size: 16px;
+    margin: 15px 0 5px;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.size-button {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.size-button:hover {
+    background: #f0f0f0;
+}
+
+.disabled {
+    background: #f0f0f0;
+    color: #999;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+.sold-out {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.view-details {
+    font-size: 14px;
+    color: #b07d62;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+   </style>
+        <section class="product-section">
+          <div class="product-card">
+            <img src="mo.jpg" alt="Brown Moon">
+            <h3> Brown Moon</h3>
+            <p>Delivery in 6-8 days</p>
+            <body>
+                <div class="product-container">
+                    <h1>Hania Dress - Brown</h1>
+                    <p class="delivery"> (Delivery in 6-8 days)</p>
+                    <p class="price">₹ 2,499.00 INR</p>
+                    <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+            
+                    <p class="size-title">Size</p>
+                    <div class="size-options">
+                        <button class="size-button disabled">Small</button>
+                        <button class="size-button disabled">Medium</button>
+                        <button class="size-button">Large</button>
+                        <button class="size-button disabled">X-Large</button>
+                        <button class="size-button disabled">XX-Large</button>
+                    </div>
+
+                </div>
+            
+          </div>
+    
+          <div class="product-card">
+            <img src="mooooo.jpg" alt="Black Butterfly">
+            <h3>Black Butterfly</h3>
+            <p>Delivery in 6-8 days</p>
+            <body>
+                <div class="product-container">
+                    <h1>Hania Dress - Brown</h1>
+                    <p class="delivery"> (Delivery in 6-8 days)</p>
+                    <p class="price">₹ 2,499.00 INR</p>
+                    <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+            
+                    <p class="size-title">Size</p>
+                    <div class="size-options">
+                        <button class="size-button disabled">Small</button>
+                        <button class="size-button disabled">Medium</button>
+                        <button class="size-button">Large</button>
+                        <button class="size-button disabled">X-Large</button>
+                        <button class="size-button disabled">XX-Large</button>
+                    </div>
+                </div>
+            
+          </div>
+    
+          <div class="product-card">
+            <img src="mooo.jpg" alt="Caramel Bloom">
+            <h3>Naila Co-ord Set - Black</h3>
+            <p>₹3,100.00</p>
+            <body>
+                <div class="product-container">
+                    <h1>Caramel Bloom</h1>
+                    <p class="delivery"> (Delivery in 6-8 days)</p>
+                    <p class="price">₹ 2,499.00 INR</p>
+                    <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+            
+                    <p class="size-title">Size</p>
+                    <div class="size-options">
+                        <button class="size-button disabled">Small</button>
+                        <button class="size-button disabled">Medium</button>
+                        <button class="size-button">Large</button>
+                        <button class="size-button disabled">X-Large</button>
+                        <button class="size-button disabled">XX-Large</button>
+                    </div>
+                </div>
+            
+          </div>
+    
+          <div class="product-card">
+            <img src="moooo.jpg" alt="Sage Elegance
+            <h3>Sage Elegance</h3>
+            <p>₹3,100.00</p>
+            <body>
+                <div class="product-container">
+                    <h1>Sage Elegance
+                    <p class="delivery"> (Delivery in 6-8 days)</p>
+                    <p class="price">₹ 2,499.00 INR</p>
+                    <p class="brand">By <span class="brand-name">Abaya Exude</span></p>
+            
+                    <p class="size-title">Size</p>
+                    <div class="size-options">
+                        <button class="size-button disabled">Small</button>
+                        <button class="size-button disabled">Medium</button>
+                        <button class="size-button">Large</button>
+                        <button class="size-button disabled">X-Large</button>
+                        <button class="size-button disabled">XX-Large</button>
+                    </div>
+                </div>
+            
+          </div>
+        </section>
+      </main>
+      <style>
+        /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-filter input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.me-bucks {
+  background-color: #c5a880;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.me-bucks:hover {
+  background-color: #b08b72;
+}
+
+/* Product Section */
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #555;
+  margin: 0 0 10px 0;
+}
+{
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.product-container {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.delivery {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.brand-name {
+    color: #b07d62;
+    font-weight: bold;
+}
+
+.size-title {
+    font-size: 16px;
+    margin: 15px 0 5px;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.size-button {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.size-button:hover {
+    background: #f0f0f0;
+}
+
+.disabled {
+    background: #f0f0f0;
+    color: #999;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+.sold-out {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.view-details {
+    font-size: 14px;
+    color: #b07d62;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+      </style>
+      <body>
+        <footer>
+          <div class="footer-container">
+            <div class="footer-section">
+              <h3>Abaya Exude</h3>
+              <p>
+                Abaya Exude is a homegrown brand started in January 2025. Started with just selling Hijabs Online, we are proud to say that Abaya Exude is the most loved Modest Clothing Brand in India. ❤
+              </p>
+            </div>
+            <div class="footer-section">
+              <h3>Quick links</h3>
+              <ul>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Wholesale</a></li>
+                <li><a href="#">Work for Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Newsletter</h3>
+              <p>Sign up for exclusive offers, original stories, events, and more.</p>
+              <form>
+                <input type="email" placeholder="Your email">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </footer>
+      <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      footer {
+        background-color: #0a0a0af3;
+        padding: 20px;
+      }
+      
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .footer-section {
+        flex: 1;
+        margin: 0 15px;
+      }
+      
+      .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .footer-section p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #f8f3f3;
+      }
+      
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-section ul li {
+        margin-bottom: 8px;
+      }
+      
+      .footer-section ul li a {
+        text-decoration: none;
+        color: #f8fbff;
+        font-size: 14px;
+      }
+      
+      .footer-section ul li a:hover {
+        text-decoration: underline;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      form input {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        border: 1px solid #f1eded;
+        border-radius: 4px;
+      }
+      
+      form button {
+        padding: 10px;
+        font-size: 14px;
+        background-color: #5195df;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      form button:hover {
+        background-color: #6fa5e3;
+      }
+      </style>
+</body>
+</html>
+        

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empty Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="cart-icon">
+      <div class="cart">
+        <div class="wheel"></div>
+        <div class="wheel"></div>
+      </div>
+    </div>
+    <h1>Your Cart is Empty</h1>
+    <p>Looks like you haven't added anything to your cart yet.</p>
+    <button class="shop-now-btn">Shop Now</button>
+  </div>
+</body>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+}
+
+.cart-icon {
+  margin: 0 auto 20px;
+  width: 100px;
+  height: 80px;
+  position: relative;
+}
+
+.cart {
+  width: 100px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.cart:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 25px;
+  width: 50px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.wheel {
+  width: 15px;
+  height: 15px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+}
+
+.wheel:first-child {
+  left: 15px;
+}
+
+.wheel:last-child {
+  right: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+p {
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.shop-now-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #050505;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #0a0a0a;
+}
+</style>
+</html>
